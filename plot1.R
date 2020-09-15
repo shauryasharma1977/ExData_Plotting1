@@ -14,8 +14,7 @@ sqlStmt <- paste("select * from file",
 ## use sqldf to only get the requireddata  
 ## than to loading the entire dataset
 hpc <- sqldf::read.csv.sql("./data/household_power_consumption.txt",
-                           sql = sqlStmt , 
-                           nrows=10000, sep=";")
+                           sql = sqlStmt, sep=";")
 
 
 ## Convert to  desired variable types
